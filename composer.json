@@ -1,0 +1,10 @@
+{
+    "name": "cozylife/truecrypt-cracker",
+    "type": "project",
+    "description" : "A brute force password cracker for TrueCrypt volumes",
+    "keywords": ["TrueCrypt", "crack", "brute force", "password tool", "PHP"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
