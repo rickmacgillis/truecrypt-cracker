@@ -8,6 +8,13 @@ Requirements
 1. PHP 5.3+ (Must have access to proc_* functions and PHP-Cli!)
 2. Linux system
 
+Installation
+------------
+
+Either clone the repo or install it with composer.
+
+`composer.phar require cozylife/truecrypt-cracker`
+
 Usage
 -----
 
