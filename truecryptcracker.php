@@ -84,6 +84,7 @@ class TrueCryptCracker
 	 */
 	public function crack()
 	{
+		$start = time();
 		foreach ($this->getPassword() as $password) {
 			
 			$ptr = proc_open('bash', $this->getDescriptors(), $pipes);
@@ -104,6 +105,7 @@ class TrueCryptCracker
 			
 			if ($this->foundCorrectPassword($response)) {
 				
+				$this->writeTimeDurationMessage(time() - $start);
 				proc_close($ptr);
 				return true;
 				
@@ -111,6 +113,7 @@ class TrueCryptCracker
 	
 		}
 
+		$this->writeTimeDurationMessage(time() - $start);
 		proc_close($ptr);
 		return false;
 	}
@@ -461,6 +464,16 @@ class TrueCryptCracker
 		}
 		
 		return false;
+	}
+	
+	/**
+	 * Write how long the process took.
+	 * 
+	 * @param int $duration	The duration in seconds
+	 */
+	protected function writeTimeDurationMessage($duration)
+	{
+		$this->displayMessage('Completed: The process took '.$duration.' seconds.');
 	}
 	
 	/**

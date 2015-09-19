@@ -23,3 +23,10 @@ Configure the script as shown in the example file. When you've finished your con
 `sudo php example.php`
 
 Sudo is important as it gives PHP access to mount the device.
+
+Tips
+----
+
+1. The script processes the possible characters list in order. Place the most likely characters first.
+2. If you think that your password contains one combination of characters **or** another combination, run two tests to find the correct password.
+3. If number two applies to you, run the tests in parallel by using multiple console windows. (You'll need to use multiple copies of your script to pull this off.)
